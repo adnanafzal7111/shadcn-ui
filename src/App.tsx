@@ -13,7 +13,7 @@ const App = () => (
     <ThemeProvider>
       <TooltipProvider>
         <Toaster />
-        <BrowserRouter>
+        <BrowserRouter basename="/shadcn-ui"> {/* ✅ This line added */}
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="*" element={<NotFound />} />

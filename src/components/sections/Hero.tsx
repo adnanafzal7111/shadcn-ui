@@ -108,7 +108,7 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-full overflow-hidden border-2 border-primary/30 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-full">
                   <img 
-                    src="/assets/img.jpg" 
+                   src="./assets/img.jpg" 
                     alt="Adnan Afzal"
                     className="w-full h-full object-cover" 
                   />
