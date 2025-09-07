@@ -1,0 +1,20 @@
+<!-- Square badge 120x120 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Adnan Afzal badge">
+  <title>Adnan Afzal — Badge</title>
+  <defs>
+    <style>
+      .bg { fill: var(--bg, #111827); } /* dark background */
+      .fg { fill: var(--fg, #10b981); } /* accent */
+      .txt { fill: var(--txt, #ffffff); font-family: Inter, Roboto, sans-serif; font-weight:700; }
+    </style>
+  </defs>
+
+  <rect width="120" height="120" rx="18" class="bg"></rect>
+
+  <!-- decorative corner bracket -->
+  <path d="M20 38 L32 26" stroke="var(--fg,#10b981)" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M100 82 L88 94" stroke="var(--fg,#10b981)" stroke-width="3" stroke-linecap="round"></path>
+
+  <!-- initials -->
+  <text x="50%" y="58%" text-anchor="middle" font-size="48" class="txt" style="letter-spacing:-3px">AA</text>
+</svg>

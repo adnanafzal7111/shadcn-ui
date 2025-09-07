@@ -31,16 +31,31 @@ export default function Contact() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
-      toast.success('Message sent successfully! I will get back to you soon.');
-      form.reset();
+  setIsSubmitting(true);
+
+  fetch("https://formspree.io/f/mblaqapb", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(values),
+  })
+    .then((response) => {
+      if (response.ok) {
+        toast.success("Message sent successfully! I’ll get back to you soon.");
+        form.reset();
+      } else {
+        toast.error("Oops! Something went wrong. Please try again.");
+      }
+    })
+    .catch(() => {
+      toast.error("Network error. Please try again later.");
+    })
+    .finally(() => {
       setIsSubmitting(false);
-    }, 1000);
-  }
+    });
+}
+
 
   return (
     <section id="contact" className="py-20 md:py-32 relative bg-muted/30">
